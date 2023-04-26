@@ -13,28 +13,20 @@ void bubble_sort(int *array, size_t size)
 {
     size_t i, j;
     int temp;
-    listint_t *current;
 
-    if (array == NULL || size < 2)
-        return;
-
-    /* Traverse the list size times */
-    for (i = 0; i < size; i++)
+    for (i = 0; i < size - 1; i++)
     {
-        current = (listint_t *)array;
-
-        /* Traverse the list from the beginning to the end */
+        /** Last i elements are already in place **/
         for (j = 0; j < size - i - 1; j++)
         {
             /* If the current element is greater than the next element, swap them */
-            if (current->n > current->next->n)
+            if (array[j] > array[j + 1])
             {
-                temp = current->n;
-                current->n = current->next->n;
-                current->next->n = temp;
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
             }
-            /* Move to the next element */
-            current = current->next;
         }
+	print_array(array, size);
     }
 }
