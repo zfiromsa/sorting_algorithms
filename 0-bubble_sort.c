@@ -33,20 +33,19 @@ void bubble_sort(int *array, size_t size)
 	}
 	else if (size == 2)
 	{
-			j = 0;
-			/* If the current element is greater than the next element, swap them */
-			if (array[j] > array[j + 1])
-			{
-				temp = array[j];
-				array[j] = array[j + 1];
-				array[j + 1] = temp;
-				print_array(array, size);
-			}
+		j = 0;
+		/* If the current element is greater than the next element, swap them */
+		if (array[j] > array[j + 1])
+		{
+			temp = array[j];
+			array[j] = array[j + 1];
+			array[j + 1] = temp;
+			print_array(array, size);
+		}
 	}
 	else
 	{
 		print_array(array, size);
-	}
 	}
 }
 
