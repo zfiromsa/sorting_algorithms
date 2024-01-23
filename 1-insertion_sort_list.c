@@ -29,8 +29,8 @@ void insertion_sort_list(listint_t **list)
  * swap - this function spaw node1 to node 3
  *
  * @list: the address of the doublelink list.
- * @node1: the 
- * @node2: the 
+ * @node1: the
+ * @node2: the
  * Return: nothing
 */
 void swap(listint_t **list, listint_t *node1, listint_t *node2)
