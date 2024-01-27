@@ -13,7 +13,7 @@ void bubble_sort(int *array, size_t size)
 {
 	unsigned int i, j, tmp;
 
-	if (!array)
+	if (!array || size <= 0)
 	{
 		fprintf(stderr, "Anything");
 		exit(1);
