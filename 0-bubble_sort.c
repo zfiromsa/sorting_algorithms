@@ -16,6 +16,7 @@ void bubble_sort(int *array, size_t size)
 	if (!array)
 	{
 		fprintf(stderr, "Anything");
+		exit(1);
 	}
 	for (i = 0; i < size - 1; i++)
 	{
