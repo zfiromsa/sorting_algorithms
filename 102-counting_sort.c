@@ -24,11 +24,17 @@ void counting_sort(int *array, size_t size)
 		return;
 	}
 	for (i = 0; i <= k; i++)
+	{
 		ca[i] = 0;
+	}
 	for (i = 0; i < size; i++)
+	{
 		ca[array[i]]++;
+	}
 	for (i = 1; i <= k; i++)
+	{
 		ca[i] += ca[i - 1];
+	}
 	for (i = size - 1; i < k; i--)
 	{
 		oa[ca[array[i]] - 1] = array[i];
